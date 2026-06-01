@@ -5,25 +5,15 @@
     "last_updated": "2026-06-01"
   },
   "entries": [
-    { "id": 1,  "title": "Eintrag Alpha",   "category": "A", "tags": ["neu", "wichtig"],  "value": 42  },
-    { "id": 2,  "title": "Eintrag Beta",    "category": "B", "tags": ["klassisch"],       "value": 7   },
-    { "id": 3,  "title": "Eintrag Gamma",   "category": "A", "tags": ["neu"],             "value": 99  },
-    { "id": 4,  "title": "Eintrag Delta",   "category": "C", "tags": ["wichtig"],         "value": 15  },
-    { "id": 5,  "title": "Eintrag Epsilon", "category": "B", "tags": ["klassisch", "neu"],"value": 31  },
-    { "id": 6,  "title": "Eintrag Zeta",    "category": "A", "tags": [],                  "value": 88  },
-    { "id": 7,  "title": "Eintrag Eta",     "category": "C", "tags": ["wichtig"],         "value": 23  },
-    { "id": 8,  "title": "Eintrag Theta",   "category": "B", "tags": ["neu"],             "value": 56  },
-    { "id": 9,  "title": "Eintrag Iota",    "category": "A", "tags": ["klassisch"],       "value": 3   },
-    { "id": 10, "title": "Eintrag Kappa",   "category": "C", "tags": [],                  "value": 77  },
-    { "id": 11, "title": "Eintrag Lambda",  "category": "B", "tags": ["wichtig", "neu"],  "value": 64  },
-    { "id": 12, "title": "Eintrag Mu",      "category": "A", "tags": ["klassisch"],       "value": 19  },
-    { "id": 13, "title": "Eintrag Nu",      "category": "C", "tags": [],                  "value": 48  },
-    { "id": 14, "title": "Eintrag Xi",      "category": "B", "tags": ["neu"],             "value": 92  },
-    { "id": 15, "title": "Eintrag Omicron", "category": "A", "tags": ["wichtig"],         "value": 11  },
-    { "id": 16, "title": "Eintrag Pi",      "category": "C", "tags": ["klassisch", "neu"],"value": 37  },
-    { "id": 17, "title": "Eintrag Rho",     "category": "B", "tags": [],                  "value": 82  },
-    { "id": 18, "title": "Eintrag Sigma",   "category": "A", "tags": ["wichtig"],         "value": 5   },
-    { "id": 19, "title": "Eintrag Tau",     "category": "C", "tags": ["neu"],             "value": 61  },
-    { "id": 20, "title": "Eintrag Upsilon", "category": "B", "tags": ["klassisch"],       "value": 44  }
+    { "id": 1,  "title": "Das am häufigsten verwendete Passwort ist '123456'."},
+    { "id": 2,  "title": "Frauenherzen schlagen schneller als Männerherzen."},
+    { "id": 3,  "title": "Im Weltraum ist es unmöglich, zu rülpsen."},
+    { "id": 4,  "title": "Es gibt mehr Plastik-Flamingos als echte"},
+    { "id": 5,  "title": "Menschen, die in einem weichen Sessel sitzen, sind kompromissbereiter."},
+    { "id": 6,  "title": "Bierdeckel haben einen Durchmesser von 107 Millimetern."},
+    { "id": 7,  "title": "Die Muskatnuss hat in großen Mengen eine halluzinogene Wirkung."},
+    { "id": 8,  "title": "Eine Wolke wiegt etwa eine Million Tonnen."},
+    { "id": 9,  "title": "95 Prozent der Babys lutschen lieber am rechten Daumen."},
+    { "id": 10, "title": "Die Sandwich-Inseln heißen heute Hawaii."}
   ]
 }
