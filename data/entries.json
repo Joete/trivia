@@ -1,19 +1,406 @@
 {
   "meta": {
-    "description": "Hier deine ~200 Einträge pflegen. Jeder Eintrag hat eine id, einen title und beliebige weitere Felder.",
-    "total": 20,
+    "description": "99 Fakten aus der Kategorie Unnützes Wissen – karrierebibel.de",
+    "total": 99,
+    "source": "https://karrierebibel.de/unnutzes-wissen/",
     "last_updated": "2026-06-01"
   },
   "entries": [
-    { "id": 1,  "title": "Das am häufigsten verwendete Passwort ist '123456'."},
-    { "id": 2,  "title": "Frauenherzen schlagen schneller als Männerherzen."},
-    { "id": 3,  "title": "Im Weltraum ist es unmöglich, zu rülpsen."},
-    { "id": 4,  "title": "Es gibt mehr Plastik-Flamingos als echte"},
-    { "id": 5,  "title": "Menschen, die in einem weichen Sessel sitzen, sind kompromissbereiter."},
-    { "id": 6,  "title": "Bierdeckel haben einen Durchmesser von 107 Millimetern."},
-    { "id": 7,  "title": "Die Muskatnuss hat in großen Mengen eine halluzinogene Wirkung."},
-    { "id": 8,  "title": "Eine Wolke wiegt etwa eine Million Tonnen."},
-    { "id": 9,  "title": "95 Prozent der Babys lutschen lieber am rechten Daumen."},
-    { "id": 10, "title": "Die Sandwich-Inseln heißen heute Hawaii."}
+    {
+      "id": 1,
+      "title": "Das am häufigsten verwendete Passwort ist \"123456\""
+    },
+    {
+      "id": 2,
+      "title": "Frauenherzen schlagen schneller als Männerherzen."
+    },
+    {
+      "id": 3,
+      "title": "Im Weltraum ist es unmöglich, zu rülpsen."
+    },
+    {
+      "id": 4,
+      "title": "Es gibt mehr Plastik-Flamingos als echte."
+    },
+    {
+      "id": 5,
+      "title": "Menschen, die in einem weichen Sessel sitzen, sind kompromissbereiter."
+    },
+    {
+      "id": 6,
+      "title": "Bierdeckel haben einen Durchmesser von 107 Millimetern."
+    },
+    {
+      "id": 7,
+      "title": "Die Muskatnuss hat in großen Mengen eine halluzinogene Wirkung."
+    },
+    {
+      "id": 8,
+      "title": "Eine Wolke wiegt etwa eine Million Tonnen."
+    },
+    {
+      "id": 9,
+      "title": "95 Prozent der Babys lutschen lieber am rechten Daumen."
+    },
+    {
+      "id": 10,
+      "title": "Die Sandwich-Inseln heißen heute Hawaii."
+    },
+    {
+      "id": 11,
+      "title": "Zu den Nebenwirkungen von Aspirin gehören Kopfschmerzen."
+    },
+    {
+      "id": 12,
+      "title": "Freitagmorgen ist der beliebteste Tag für Banküberfälle."
+    },
+    {
+      "id": 13,
+      "title": "Harry S. Truman hatte gar keinen zweiten Vornamen."
+    },
+    {
+      "id": 14,
+      "title": "Menschen verlieren ab 20 ca. 1 Gramm Gehirnmasse pro Jahr."
+    },
+    {
+      "id": 15,
+      "title": "Der Erfinder von Pringles – Fredric Baur – wurde in einer Pringles-Dose begraben."
+    },
+    {
+      "id": 16,
+      "title": "Das Nationaltier in Schottland ist ein Einhorn."
+    },
+    {
+      "id": 17,
+      "title": "Der Name der Stadt Fukushima heißt übersetzt: Glücksinsel."
+    },
+    {
+      "id": 18,
+      "title": "Im Iran gibt es einen Ort, der Shit heißt."
+    },
+    {
+      "id": 19,
+      "title": "In Alabama gibt es ein Gesetz, das Blinden verbietet, Auto zu fahren."
+    },
+    {
+      "id": 20,
+      "title": "Alexander der Große war klein: nur 1,50 Meter groß."
+    },
+    {
+      "id": 21,
+      "title": "Titanic.de ist der Internetauftritt eines Reiseveranstalters."
+    },
+    {
+      "id": 22,
+      "title": "Napoleon hatte Angst vor Katzen."
+    },
+    {
+      "id": 23,
+      "title": "Laut Berechnungen wiegt das gesamte Internet rund 50 Gramm."
+    },
+    {
+      "id": 24,
+      "title": "An einer Supermarktkasse steht man im Schnitt 7 Minuten."
+    },
+    {
+      "id": 25,
+      "title": "Ketchup wurde im 19. Jahrhundert als Medizin verkauft."
+    },
+    {
+      "id": 26,
+      "title": "Zitronen schwimmen – Limetten gehen unter."
+    },
+    {
+      "id": 27,
+      "title": "Honig verdirbt nie."
+    },
+    {
+      "id": 28,
+      "title": "80 % der Dinge, um die wir uns Sorgen machen, treten nie ein."
+    },
+    {
+      "id": 29,
+      "title": "Auberginen enthalten Nikotin."
+    },
+    {
+      "id": 30,
+      "title": "Mit einem Bleistift kann man einen 56 km langen Strich zeichnen."
+    },
+    {
+      "id": 31,
+      "title": "Der Name Sandwich stammt aus dem 18. Jhd. vom Erfinder – dem 4. Earl of Sandwich."
+    },
+    {
+      "id": 32,
+      "title": "Flusspferde furzen durch den Mund."
+    },
+    {
+      "id": 33,
+      "title": "Gürteltiere sind kugelsicher (nicht ausprobieren!)."
+    },
+    {
+      "id": 34,
+      "title": "Bienen können Gesichter erkennen."
+    },
+    {
+      "id": 35,
+      "title": "Kühe haben beste Freundinnen."
+    },
+    {
+      "id": 36,
+      "title": "Pferde können gar nicht kotzen."
+    },
+    {
+      "id": 37,
+      "title": "Wombats haben würfelförmigen Kot."
+    },
+    {
+      "id": 38,
+      "title": "Regenwürmer haben fünf Herzen."
+    },
+    {
+      "id": 39,
+      "title": "Schmetterlinge schmecken mit ihren Füßen."
+    },
+    {
+      "id": 40,
+      "title": "Kakerlaken können extrem lange ohne Kopf überleben."
+    },
+    {
+      "id": 41,
+      "title": "Enten-Penisse haben die Form eines Korkenziehers."
+    },
+    {
+      "id": 42,
+      "title": "Wenn Koalas gestresst sind, bekommen sie Schluckauf."
+    },
+    {
+      "id": 43,
+      "title": "Die Augen eines Straußes sind größer als sein Gehirn."
+    },
+    {
+      "id": 44,
+      "title": "Eisbären haben schwarze Haut."
+    },
+    {
+      "id": 45,
+      "title": "Wale sprechen in verschiedenen Dialekten untereinander."
+    },
+    {
+      "id": 46,
+      "title": "Elefanten sind die einzigen Landtiere, die nicht springen können."
+    },
+    {
+      "id": 47,
+      "title": "Wer satt ist, hört schlechter."
+    },
+    {
+      "id": 48,
+      "title": "Abends sind wir bis zu 2 cm kleiner als morgens."
+    },
+    {
+      "id": 49,
+      "title": "Fingernägel wachsen dreimal so schnell wie Zehennägel."
+    },
+    {
+      "id": 50,
+      "title": "Es ist unmöglich mit offenen Augen zu niesen."
+    },
+    {
+      "id": 51,
+      "title": "Statistisch lügen Menschen alle 4,8 Minuten."
+    },
+    {
+      "id": 52,
+      "title": "Nur zwei Körperteile wachsen ein Leben lang: Ohren und Nase."
+    },
+    {
+      "id": 53,
+      "title": "Babys haben keinen Mundgeruch."
+    },
+    {
+      "id": 54,
+      "title": "Kein Mensch kann seinen eigenen Ellenbogen küssen."
+    },
+    {
+      "id": 55,
+      "title": "Jeder Mensch hat mit rund 16,5 Millionen anderen gleichzeitig Geburtstag."
+    },
+    {
+      "id": 56,
+      "title": "Ab mehr als drei Tassen Kaffee sinkt die Produktivität um 5 Prozent pro Tasse."
+    },
+    {
+      "id": 57,
+      "title": "34 Prozent der Deutschen träumen nachts von ihrer Arbeit."
+    },
+    {
+      "id": 58,
+      "title": "Deutschland hat 7x die Hauptstadt gewechselt."
+    },
+    {
+      "id": 59,
+      "title": "Das Oktoberfest findet meistens im September statt."
+    },
+    {
+      "id": 60,
+      "title": "Berlin heißt übersetzt Ort in einem sumpfigen Gelände."
+    },
+    {
+      "id": 61,
+      "title": "Nur 7 von 10 Banküberfällen in Deutschland werden aufgeklärt."
+    },
+    {
+      "id": 62,
+      "title": "Jeder 3. Deutsche telefoniert täglich mit seiner Mutter."
+    },
+    {
+      "id": 63,
+      "title": "In Deutschland werden 20-Euro-Scheine am häufigsten gefälscht."
+    },
+    {
+      "id": 64,
+      "title": "Das längste deutsche Wort hat 86 Buchstaben."
+    },
+    {
+      "id": 65,
+      "title": "Die meisten Touristen in Deutschland sind Deutsche."
+    },
+    {
+      "id": 66,
+      "title": "Der Föhn wurde in Deutschland erfunden – 1908 von AEG."
+    },
+    {
+      "id": 67,
+      "title": "Jeder Deutsche verbraucht im Leben 3.652 Rollen Klopapier."
+    },
+    {
+      "id": 68,
+      "title": "Das Bundeskanzleramt hat 13 Wintergärten."
+    },
+    {
+      "id": 69,
+      "title": "Von den in Deutschland geborenen Zwillingen sind nur 25 Prozent eineiig."
+    },
+    {
+      "id": 70,
+      "title": "Die Berliner Philharmonie hat die weltweit beste Akustik unter allen Konzerthäusern."
+    },
+    {
+      "id": 71,
+      "title": "Berlin liegt geografisch nördlicher als London."
+    },
+    {
+      "id": 72,
+      "title": "In Deutschland gibt es mehr als 7.000 Biersorten."
+    },
+    {
+      "id": 73,
+      "title": "4,3 Millionen Deutsche trinken Alkohol am Arbeitsplatz."
+    },
+    {
+      "id": 74,
+      "title": "Auf der Insel Norderney wählen die Menschen in Strandkörben."
+    },
+    {
+      "id": 75,
+      "title": "Die deutsche Sprache kennt mehr als 300.000 Worte."
+    },
+    {
+      "id": 76,
+      "title": "Die erste Autobahn der Welt wurde 1932 eröffnet – zwischen Köln und Bonn."
+    },
+    {
+      "id": 77,
+      "title": "Den Straftatbestand Beamtenbeleidigung gibt es im Strafgesetzbuch gar nicht."
+    },
+    {
+      "id": 78,
+      "title": "Auf Orange reimt sich kein deutsches Wort."
+    },
+    {
+      "id": 79,
+      "title": "Der häufigste Geburtstag in Deutschland ist der 21. September."
+    },
+    {
+      "id": 80,
+      "title": "Die meist verbreitete Krankheit der Welt ist Karies."
+    },
+    {
+      "id": 81,
+      "title": "Nur rund 11 Prozent der Menschen sind Linkshänder."
+    },
+    {
+      "id": 82,
+      "title": "Der Eifelturm schrumpft bei Kälte um 15 Zentimeter."
+    },
+    {
+      "id": 83,
+      "title": "Das erste YouTube-Video ist nur 19 Sekunden lang."
+    },
+    {
+      "id": 84,
+      "title": "In Hotelzimmern werden vor allem Kleiderbügel gestohlen."
+    },
+    {
+      "id": 85,
+      "title": "Für die US-Auflage des letzten Harry-Potter-Bandes wurden 217.475 Bäume gefällt."
+    },
+    {
+      "id": 86,
+      "title": "Der erste Unternehmer, der Mitarbeitern am Wochenende freigab, war Henry Ford."
+    },
+    {
+      "id": 87,
+      "title": "An Wahltagen darf in Norwegen kein Alkohol verkauft werden."
+    },
+    {
+      "id": 88,
+      "title": "Jedes Jahr gehen weltweit an Flughäfen 25 Millionen Koffer verloren."
+    },
+    {
+      "id": 89,
+      "title": "Alle 1-Cent-Stücke sind zusammen 157 Mio. Euro wert."
+    },
+    {
+      "id": 90,
+      "title": "Die Frisur VoKuHila wurde schon in Mesopotamien getragen."
+    },
+    {
+      "id": 91,
+      "title": "Das beliebteste Topping auf einer Pizza in Brasilien sind Erbsen."
+    },
+    {
+      "id": 92,
+      "title": "In Singapur ist es verboten, Kaugummi zu kaufen oder zu verkaufen."
+    },
+    {
+      "id": 93,
+      "title": "In der Schweiz ist es illegal, nur ein einziges Meerschweinchen zu halten."
+    },
+    {
+      "id": 94,
+      "title": "Wer im Londoner Westminster-Palast stirbt, hat Anrecht auf ein Staatsbegräbnis."
+    },
+    {
+      "id": 95,
+      "title": "Die britische Labour Party singt ihre Parteihymne zur Melodie von O Tannenbaum."
+    },
+    {
+      "id": 96,
+      "title": "Der US-Präsident hat eine eigene Postleitzahl."
+    },
+    {
+      "id": 97,
+      "title": "In den Casinos in Las Vegas gibt es keine Uhren."
+    },
+    {
+      "id": 98,
+      "title": "Mark Zuckerberg ist rot-grün-blind, deshalb ist die Facebook-Farbe Blau."
+    },
+    {
+      "id": 99,
+      "title": "Unnützes Wissen heißt auf Englisch useless knowledge oder trivia."
+    }
   ]
 }
