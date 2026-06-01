@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "description": "Hier deine ~200 Einträge pflegen. Jeder Eintrag hat eine id, einen title und beliebige weitere Felder.",
+    "total": 20,
+    "last_updated": "2026-06-01"
+  },
+  "entries": [
+    { "id": 1,  "title": "Eintrag Alpha",   "category": "A", "tags": ["neu", "wichtig"],  "value": 42  },
+    { "id": 2,  "title": "Eintrag Beta",    "category": "B", "tags": ["klassisch"],       "value": 7   },
+    { "id": 3,  "title": "Eintrag Gamma",   "category": "A", "tags": ["neu"],             "value": 99  },
+    { "id": 4,  "title": "Eintrag Delta",   "category": "C", "tags": ["wichtig"],         "value": 15  },
+    { "id": 5,  "title": "Eintrag Epsilon", "category": "B", "tags": ["klassisch", "neu"],"value": 31  },
+    { "id": 6,  "title": "Eintrag Zeta",    "category": "A", "tags": [],                  "value": 88  },
+    { "id": 7,  "title": "Eintrag Eta",     "category": "C", "tags": ["wichtig"],         "value": 23  },
+    { "id": 8,  "title": "Eintrag Theta",   "category": "B", "tags": ["neu"],             "value": 56  },
+    { "id": 9,  "title": "Eintrag Iota",    "category": "A", "tags": ["klassisch"],       "value": 3   },
+    { "id": 10, "title": "Eintrag Kappa",   "category": "C", "tags": [],                  "value": 77  },
+    { "id": 11, "title": "Eintrag Lambda",  "category": "B", "tags": ["wichtig", "neu"],  "value": 64  },
+    { "id": 12, "title": "Eintrag Mu",      "category": "A", "tags": ["klassisch"],       "value": 19  },
+    { "id": 13, "title": "Eintrag Nu",      "category": "C", "tags": [],                  "value": 48  },
+    { "id": 14, "title": "Eintrag Xi",      "category": "B", "tags": ["neu"],             "value": 92  },
+    { "id": 15, "title": "Eintrag Omicron", "category": "A", "tags": ["wichtig"],         "value": 11  },
+    { "id": 16, "title": "Eintrag Pi",      "category": "C", "tags": ["klassisch", "neu"],"value": 37  },
+    { "id": 17, "title": "Eintrag Rho",     "category": "B", "tags": [],                  "value": 82  },
+    { "id": 18, "title": "Eintrag Sigma",   "category": "A", "tags": ["wichtig"],         "value": 5   },
+    { "id": 19, "title": "Eintrag Tau",     "category": "C", "tags": ["neu"],             "value": 61  },
+    { "id": 20, "title": "Eintrag Upsilon", "category": "B", "tags": ["klassisch"],       "value": 44  }
+  ]
+}

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Pick Service</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:       #0d0d0f;
+      --surface:  #141417;
+      --border:   #1e1e24;
+      --accent:   #e94560;
+      --accent2:  #ff7b54;
+      --text:     #e8e8ea;
+      --muted:    rgba(232,232,234,.45);
+      --mono:     'DM Mono', monospace;
+      --serif:    'DM Serif Display', serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { height: 100%; }
+
+    body {
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--mono);
+      display: grid;
+      place-items: center;
+      padding: 2rem 1rem;
+      overflow-x: hidden;
+    }
+
+    /* ── subtle noise texture ── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+
+    /* ── accent glow ── */
+    body::after {
+      content: '';
+      position: fixed;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(233,69,96,.12) 0%, transparent 70%);
+      top: -200px; right: -200px;
+      pointer-events: none; z-index: 0;
+    }
+
+    .wrap {
+      position: relative; z-index: 1;
+      width: 100%; max-width: 720px;
+    }
+
+    /* ── Header ── */
+    header {
+      margin-bottom: 3rem;
+      animation: fadeUp .6s ease both;
+    }
+
+    .label {
+      font-size: .7rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .6rem;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-style: italic;
+      line-height: 1.15;
+      color: var(--text);
+    }
+
+    h1 span { color: var(--accent); }
+
+    .subtitle {
+      margin-top: .8rem;
+      font-size: .8rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ── Card ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem 2rem 1.75rem;
+      animation: fadeUp .6s .1s ease both;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(233,69,96,.06) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pill {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      background: rgba(233,69,96,.15);
+      color: var(--accent);
+      border: 1px solid rgba(233,69,96,.25);
+      border-radius: 999px;
+      padding: .3em .85em;
+    }
+
+    .timestamp {
+      font-size: .7rem;
+      color: var(--muted);
+    }
+
+    /* ── Result title ── */
+    .result-title {
+      font-family: var(--serif);
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      margin-bottom: 1.25rem;
+      line-height: 1.2;
+    }
+
+    /* ── Key/value grid ── */
+    .kv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: .75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .kv {
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: .75rem 1rem;
+    }
+
+    .kv-key {
+      font-size: .65rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: .3rem;
+    }
+
+    .kv-val {
+      font-size: .9rem;
+      color: var(--text);
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(255,123,84,.12);
+      color: var(--accent2);
+      border: 1px solid rgba(255,123,84,.2);
+      border-radius: 4px;
+      font-size: .65rem;
+      padding: .2em .6em;
+      margin-right: .3rem;
+      letter-spacing: .06em;
+    }
+
+    /* ── JSON block ── */
+    .json-section {
+      margin-top: 1.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .json-label {
+      font-size: .65rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: .6rem;
+    }
+
+    pre {
+      background: rgba(0,0,0,.35);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      font-family: var(--mono);
+      font-size: .78rem;
+      line-height: 1.65;
+      color: #a8a8b8;
+      overflow-x: auto;
+    }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      animation: fadeUp .6s .2s ease both;
+    }
+
+    .endpoint {
+      font-size: .75rem;
+      color: var(--muted);
+    }
+
+    .endpoint a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(233,69,96,.3);
+      padding-bottom: 1px;
+      transition: border-color .2s;
+    }
+    .endpoint a:hover { border-color: var(--accent); }
+
+    .refresh-btn {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: .55em 1.4em;
+      font-family: var(--mono);
+      font-size: .75rem;
+      letter-spacing: .08em;
+      cursor: pointer;
+      transition: opacity .2s, transform .1s;
+    }
+    .refresh-btn:hover  { opacity: .85; }
+    .refresh-btn:active { transform: scale(.97); }
+
+    /* ── States ── */
+    .loading { color: var(--muted); font-size: .85rem; padding: 2rem 0; text-align: center; }
+    .error   { color: var(--accent); font-size: .8rem; padding: 1rem 0; }
+
+    /* ── Anim ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .spinning { display: inline-block; animation: spin .7s linear infinite; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <p class="label">Static API · GitHub Pages</p>
+      <h1>Random Pick <span>Service</span></h1>
+      <p class="subtitle">
+        Täglich um 06:00 UTC wählt eine GitHub Action automatisch einen zufälligen Eintrag aus<br>
+        und stellt ihn als <code>result.json</code> bereit.
+      </p>
+    </header>
+
+    <div class="card" id="card">
+      <div class="loading" id="loading"><span class="spinning">◌</span>&nbsp; Lade result.json …</div>
+    </div>
+
+    <footer>
+      <div class="endpoint">
+        Endpunkt:&nbsp;
+        <a id="endpoint-link" href="result.json" target="_blank">result.json</a>
+      </div>
+      <button class="refresh-btn" onclick="load()">↻ Neu laden</button>
+    </footer>
+  </div>
+
+  <script>
+    async function load() {
+      const card = document.getElementById('card');
+      card.innerHTML = '<div class="loading"><span class="spinning">◌</span>&nbsp; Lade result.json …</div>';
+
+      try {
+        const res = await fetch('result.json?t=' + Date.now());
+        if (!res.ok) throw new Error(res.status);
+        const data = await res.json();
+        render(card, data);
+      } catch (e) {
+        card.innerHTML = `<div class="error">⚠ Fehler beim Laden: ${e.message}<br>
+          Stelle sicher, dass <code>result.json</code> im gleichen Verzeichnis liegt.</div>`;
+      }
+    }
+
+    function fmt(val) {
+      if (Array.isArray(val)) {
+        if (!val.length) return '<span style="color:var(--muted)">—</span>';
+        return val.map(t => `<span class="tag">${t}</span>`).join('');
+      }
+      return String(val);
+    }
+
+    function render(card, data) {
+      const r = data.result;
+      const ts = new Date(data.generated_at).toLocaleString('de-DE', {
+        dateStyle: 'medium', timeStyle: 'short'
+      });
+
+      // Build KV pairs (alle Felder außer title)
+      const ignore = new Set(['title']);
+      const kvHTML = Object.entries(r)
+        .filter(([k]) => !ignore.has(k))
+        .map(([k, v]) => `
+          <div class="kv">
+            <div class="kv-key">${k}</div>
+            <div class="kv-val">${fmt(v)}</div>
+          </div>`).join('');
+
+      card.innerHTML = `
+        <div class="card-header">
+          <span class="pill">Tagesergebnis</span>
+          <span class="timestamp">Generiert: ${ts} &nbsp;·&nbsp; ${data.total_entries} Einträge</span>
+        </div>
+
+        <div class="result-title">${r.title ?? '(kein Titel)'}</div>
+
+        <div class="kv-grid">${kvHTML}</div>
+
+        <div class="json-section">
+          <div class="json-label">Raw JSON</div>
+          <pre>${JSON.stringify(data, null, 2)}</pre>
+        </div>`;
+    }
+
+    load();
+  </script>
+</body>
+</html>
