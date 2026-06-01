@@ -1,13 +1,8 @@
 {
-  "generated_at": "2026-06-01T11:24:19.896543+00:00",
-  "total_entries": 20,
+  "generated_at": "2026-06-01T11:34:24.416074+00:00",
+  "total_entries": 10,
   "result": {
-    "id": 3,
-    "title": "Eintrag Gamma",
-    "category": "A",
-    "tags": [
-      "neu"
-    ],
-    "value": 99
+    "id": 10,
+    "title": "Die Sandwich-Inseln heißen heute Hawaii."
   }
 }
