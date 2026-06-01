@@ -1,14 +1,13 @@
 {
-  "generated_at": "2026-06-01T10:46:49.377471+00:00",
+  "generated_at": "2026-06-01T11:24:19.896543+00:00",
   "total_entries": 20,
   "result": {
-    "id": 16,
-    "title": "Eintrag Pi",
-    "category": "C",
+    "id": 3,
+    "title": "Eintrag Gamma",
+    "category": "A",
     "tags": [
-      "klassisch",
       "neu"
     ],
-    "value": 37
+    "value": 99
   }
 }
