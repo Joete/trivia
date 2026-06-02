@@ -3,7 +3,7 @@ name: Daily Random Pick
 on:
   # Täglich um 06:00 UTC automatisch
   schedule:
-    - cron: "0 6 * * *"
+    - cron: "0 6,12,18 * * *"
 
   # Manuell auslösbar über das Actions-Tab im Repo
   workflow_dispatch:
